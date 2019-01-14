@@ -1,10 +1,18 @@
-1. new repository »ı¼º
+http://ndb796.tistory.com/51
 
-¢º git config user.name ÀÌ¸§
+1. new repository ìƒì„±
 
-¢º git config user.email ÀÌ¸ŞÀÏ
 
-¢º git remote add origin ÀúÀå¼Ò
+â–¶ git config user.name ì´ë¦„
 
-¢º git remote -v
+â–¶ git config user.email ì´ë©”ì¼
 
+â–¶ git remote add origin ì €ì¥ì†Œ
+
+â–¶ git remote -v
+
+â–¶ git add íŒŒì¼
+
+â–¶ git commit -m ì»¤ë°‹ ë©”ì‹œì§€
+
+â–¶ git push -u origin master

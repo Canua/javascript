@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>메모</title>
+  <style>
+    #add-btn {
+      padding : 5px 10px;
+      border : 0;
+      background : yellowgreen;
+      color : white;
+      border-radius : 5px;
+      height: 50px;
+      width : 50px;
+      }
+      ul{
+        padding : 0;
+        list-style-position: inside;
+        /* 왼쪽 패딩 0 */
+      }
+      li{
+        border-bottom: 1px solid black;
+        padding: 5px 0;
+      }
+      .active {
+        background: #abc;
+      }
+    </style>
+</head>
+
+<body>
+  <h1 id="title">오늘 하루</h1>
+  <br>
+  <button id="add-btn">메모 추가</button>
+  <ul id="list">
+    <li>출석</li>
+  </ul>
+  <script type="text/javascript">
+    var title = document.getElementById('title');
+    var list = document.getElementById('list');
+    var li = list.getElementsByTagName('li'); // ul 자식 li 요소 =) querySelector
+    var addBtn = document.getElementById('add-btn');
+
+    list.addEventListener('click', activeItem);
+    // 이벤트 리스너가 외부 함수인 activeItem을 호출하는 콜백 함수 ( 이벤트 바인딩 )
+    // addEventListener 추가
+
+    function activeItem(event) { // 매개변수 <event></event>
+      if (event.target.nodeName == 'LI') { // 클릭한 요소
+        title.innerHTML = event.target.innerText;
+        // title 변경
+        for (var i = 0; i < event.target.parentNode.children.length; i++) {
+          event.target.parentNode.children[i].removeAttribute('class');
+        }
+        event.target.setAttribute('class', 'active');
+        // setAttribute를 이용하여 active class로 변경
+      }
+    }
+
+
+    addBtn.addEventListener('click', function() {
+      var txt = prompt('메모 입력');
+      list.innerHTML += '<li>' + txt + '</li>';
+    });
+  </script>
+</body>
+
+</html>
