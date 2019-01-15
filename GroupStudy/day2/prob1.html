@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script type="text/javascript">
+    window.onload = function() {
+      document.body.setAttribute('data-custom', 'value');
+
+      var dataCustom = document.body.getAttribute("data-custom");
+      alert(dataCustom);
+
+      var image = document.getElementById('image');
+      image.src = 'http://placehold.it/300x200';
+      image.width = 300;
+      image.height = 200;
+
+      var clock = document.getElementById('clock');
+
+      setInterval(function() {
+        var now = new Date();
+        clock.innerHTML = now;
+      }, 1000);
+    }
+  </script>
+</head>
+
+<body>
+  <img id="image" alt="">
+  <br>
+  <h1 id="clock"></h1>
+</body>
+
+</html>

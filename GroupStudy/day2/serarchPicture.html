@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="kor" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>또치를 찾아라 !</title>
+
+  <style media="screen">
+    td {
+      border: 3px solid black;
+      width: 105px;
+      height: 105px;
+    }
+
+    img {
+      width: 100px;
+      height: 100px;
+    }
+  </style>
+</head>
+
+<body>
+  <table border="1" id="table">
+    <tr>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+    </tr>
+    <tr>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+    </tr>
+    <tr>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+    </tr>
+    <tr>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+    </tr>
+    <tr>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+      <td><img src="" alt="" onclick="change()"></td>
+    </tr>
+  </table>
+  <script>
+    var table = document.getElementById('table');
+    var tds = table.getElementsByTagName('td');
+    var imgs = table.getElementsByTagName('img');
+    var result = Math.floor(Math.random() * 25);
+    imgs[result].src = "1.jpg";
+
+    function change() {
+      for (var i = 0; i < 25; i++) {
+        imgs[i].src = "";
+      }
+      imgs[result].src = "1.jpg";
+      result = Math.floor(Math.random() * 25);
+      console.log(result);
+    }
+  </script>
+</body>
+
+</html>
